@@ -28,4 +28,4 @@ This project analyzes pizza sales data to uncover revenue trends, customer order
 
 ## 👤 Author
 Yash Shirture  
-Data Analyst
+Data Analyst | Excel • SQL • Power BI
