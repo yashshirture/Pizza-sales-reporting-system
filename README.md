@@ -1,53 +1,58 @@
-# 🍕 Pizza Sales Intelligence System (Excel)
+# 🍕 Pizza Sales Reporting System (Excel + SQL)
 
 ## 🧩 Problem  
-Raw sales data contained inconsistent formats, missing values, and unstructured order records.  
-Using this data directly would produce misleading revenue trends and unreliable performance metrics.
+Raw pizza sales data contained inconsistent date formats, missing fields, and duplicate order records.  
+Using this data directly would lead to wrong revenue totals, misleading trends, and incorrect business decisions.
 
 ## 🎯 Objective  
-Transform messy transactional data into a clean, structured reporting layer that produces accurate, repeatable sales insights for business use.
+Create a clean, repeatable reporting pipeline that converts messy sales data into reliable, business-ready metrics while preventing silent calculation errors.
 
 ## 🚨 Data Issues Identified  
-- Inconsistent date and currency formats  
-- Missing values in key fields  
-- Unstructured order-level data  
-- Duplicate or partial records  
-- Totals not matching across sheets  
+- Duplicate order IDs  
+- Missing quantities and prices  
+- Inconsistent date formats  
+- Category mismatches  
+- Totals not matching raw records  
 
 ## 🛠️ Approach  
-1. Isolated raw data from working layers  
-2. Normalized formats (dates, currency, categories)  
-3. Cleaned and standardized product and order fields  
-4. Built structured Pivot-based reports  
-5. Created validation checks for totals and record counts  
-6. Designed repeatable summaries for daily and monthly use  
+1. Separated raw data from clean working layers  
+2. Standardized dates, categories, and numeric fields  
+3. Built validation checks for:  
+   - Duplicate orders  
+   - Missing values  
+   - Revenue mismatches  
+4. Used **SQL** to:  
+   - Aggregate orders  
+   - Validate totals  
+   - Cross-check business metrics  
+5. Built structured Excel summaries for reporting  
+6. Designed dashboards for revenue and demand trends  
 
 ## 🛡️ Validation & Control Logic  
-- Row-count and completeness checks  
-- Revenue reconciliation across views  
-- Category consistency checks  
-- Formula-based guards for silent errors  
+- Order count checks between raw and clean layers  
+- Revenue reconciliation between SQL and Excel outputs  
+- Null and duplicate detection rules  
+- Sanity checks for daily and monthly totals  
 
-Any mismatch triggers a review before results are used.
+Any mismatch is flagged before reporting.
 
 ## 📊 Output  
 - Clean transactional dataset  
-- Revenue and order trend summaries  
-- Performance views by product and category  
-- Business-ready Excel reports  
+- Revenue and order trend reports  
+- Business-ready dashboard for performance tracking  
 
 ## 💡 Why This Matters  
-Sales data changes every day.  
-A report that works once but breaks silently later is dangerous.
+Sales data is often trusted blindly—and that’s dangerous.  
+This system is built to:
 
-This system is built to:  
-- Expect messy inputs  
-- Enforce structure  
-- Surface inconsistencies  
-- Deliver numbers that can be trusted  
+- Assume data can be wrong  
+- Catch errors early  
+- Prevent silent misreporting  
+- Protect business decisions  
 
 The goal is not charts.  
-The goal is **reliable business decisions**.
+The goal is **reliable numbers**.
 
 ## 🧰 Tools Used  
-- **MS Excel** – Data Cleaning, Standardization, Pivot Tables, Validation, Reporting  
+- **MS Excel** – Cleaning, Validation, Structured Reporting  
+- **SQL** – Aggregation, Reconciliation, Metric Validation  
