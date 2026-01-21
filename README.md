@@ -1,5 +1,9 @@
 # 🍕 Pizza Sales Reporting System (Excel + SQL)
 
+## 📊 Dashboard Preview
+
+![Pizza Dashboard](./dashboard.png)
+
 ## 🧩 Problem  
 Raw pizza sales data contained inconsistent date formats, missing fields, and duplicate order records.  
 Using this data directly would lead to wrong revenue totals, misleading trends, and incorrect business decisions.
